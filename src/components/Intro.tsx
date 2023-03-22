@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react';
 import { animated, useTransition, useSpring } from '@react-spring/web';
 import useStyles from '../useStyles';
 
-export default function Intro() {
+type Props = {
+  display: boolean;
+  setDisplay: Function;
+}
+
+export default function Intro({ display, setDisplay }: Props) {
   const classes = useStyles();
 
-  const [display, setDisplay] = useState<boolean>(false);
   const transitions = useTransition(display, {
     from: {
       opacity: 0,
@@ -38,10 +41,6 @@ export default function Intro() {
   const buttonSpring = useSpring({
     transform: display ? 'translate(0,0)' : 'translate(0,200px)',
   });
-
-  useEffect(() => {
-    setDisplay(true);
-  }, []);
 
   return transitions((styles, item) => (
     item && (
