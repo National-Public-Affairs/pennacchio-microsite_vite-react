@@ -13,7 +13,7 @@ export default function Intro() {
 
       <div className={classes.heroButtonWrapper}>
         <button className={`${classes.heroButton} ${classes.button}`}>
-          Find out more
+          find out more
         </button>
       </div>
 
