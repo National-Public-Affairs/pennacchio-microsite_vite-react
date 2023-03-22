@@ -7,6 +7,10 @@ const useStyles = createUseStyles({
     border: 'none',
     borderRadius: '1rem',
     backgroundColor: 'var(--red)',
+    fontFamily: 'Roboto Mono',
+    fontSize: '1rem',
+    fontWeight: 500,
+    fontStyle: 'regular',
     transition: 'background-color 150ms ease-in-out',
     cursor: 'pointer',
     '&:hover': {
@@ -16,6 +20,12 @@ const useStyles = createUseStyles({
       backgroundColor: 'gray',
     },
   },
+  heroButton: {
+    justifySelf: 'center',
+    alignSelf: 'center',
+    padding: '1rem 5vw',
+    fontSize: '1.8vw',
+  },
   heroButtonWrapper: {
     position: 'absolute',
     bottom: 0,
@@ -23,13 +33,9 @@ const useStyles = createUseStyles({
     right: 0,
     zIndex: 6,
     height: '20vh',
+    fontSize: '2vw',
     display: 'grid',
     gridTemplate: '100% / 100%',
-  },
-  heroButton: {
-    justifySelf: 'center',
-    alignSelf: 'center',
-    width: '20vw',
   },
   heroTextWrapper: {
     position: 'absolute',
@@ -49,6 +55,8 @@ const useStyles = createUseStyles({
     color: 'white',
     fontFamily: 'Roboto Mono',
     fontSize: 'clamp(38px, 10vw, 150px)',
+    fontWeight: 700,
+    fontStyle: 'italic',
     lineHeight: '8vw',
     cursor: 'default',
   },
