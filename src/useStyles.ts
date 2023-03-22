@@ -2,6 +2,10 @@ import { createUseStyles } from "react-jss";
 import heroImage from './assets/Mastrangelo.jpg';
 
 const useStyles = createUseStyles({
+  body: {
+    zIndex: 0,
+    maxWidth: 1280,
+  },
   button: {
     padding: '1rem',
     border: 'none',
@@ -91,7 +95,7 @@ const useStyles = createUseStyles({
     position: 'absolute',
     top: 0,
     right: 0,
-    zIndex: 2,
+    zIndex: 3,
     width: '70%',
     height: '75vh',
     backgroundColor: '#DF2935',
@@ -100,7 +104,7 @@ const useStyles = createUseStyles({
     position: 'absolute',
     top: 0,
     right: 0,
-    zIndex: 1,
+    zIndex: 2,
     width: '88%',
     height: '60vh',
     backgroundColor: '#7C131A',
@@ -111,7 +115,7 @@ const useStyles = createUseStyles({
     bottom: 0,
     left: 0,
     right: 0,
-    zIndex: 0,
+    zIndex: 1,
   },
   '@media only screen and (max-width: 900px) and (min-height: 300px)': {
     heroText: {
