@@ -5,7 +5,6 @@ const useStyles = createUseStyles({
   body: {
     zIndex: 0,
     maxWidth: 1280,
-    overflowY: 'auto',
   },
   threeColumn: {
     marginBottom: 100,
