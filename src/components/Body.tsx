@@ -1,8 +1,9 @@
 import { animated, useTransition } from '@react-spring/web';
 import useStyles from '../useStyles';
+import Qualities from './Qualities';
 
 type Props = {
-  display: boolean,
+  display: boolean;
 }
 
 export default function Body({ display }: Props) {
@@ -33,6 +34,8 @@ export default function Body({ display }: Props) {
         <h1 style={{ color: 'yellow' }}>
           Mastrangelo:
         </h1>
+
+        <Qualities />
       </animated.div>
     )
   ))
