@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import { animated, useTrail } from '@react-spring/web';
 import useStyles from '../useStyles';
 
@@ -5,13 +6,20 @@ export default function Qualities() {
   const classes = useStyles();
 
   const trails = useTrail(3, {
-    
+    from: {
+      opacity: 0,
+      transform: 'translate(0,100px)',
+    },
+    to: {
+      opacity: 1,
+      transform: 'translate(0,0)',
+    },
+    delay: 1500,
   });
 
-  return (
-    <div className={classes.threeColumn}>
-      <div>
-        <h2 className={classes.hTwo}>
+  const blurbOne = (): ReactElement => (
+    <>
+      <h2 className={classes.hTwo}>
           BULLIES
         </h2>
         <p>
@@ -32,10 +40,12 @@ export default function Qualities() {
           <br />
           FILED: 04-25-2016
         </p>
-      </div>
+    </>
+  );
 
-      <div>
-        <h2 className={classes.hTwo}>
+  const blurbTwo = (): ReactElement => (
+    <>
+      <h2 className={classes.hTwo}>
           HARRASSES
         </h2>
         <p>
@@ -66,10 +76,12 @@ export default function Qualities() {
         <p>
           MONTVILLE TWP MUNICIPAL COURT
         </p>
-      </div>
+    </>
+  );
 
-      <div>
-        <h2 className={classes.hTwo}>
+  const blurbThree = (): ReactElement => (
+    <>
+      <h2 className={classes.hTwo}>
           INTIMIDATES
         </h2>
         <p>
@@ -91,7 +103,20 @@ export default function Qualities() {
         <p>
           "She felt threatened by Mastrangelo's demeanor and that [Mastrangelo] is a "scary guy""
         </p>
-      </div>
+    </>
+  );
+
+  const data: ReactElement[] = [blurbOne(), blurbTwo(), blurbThree()];
+
+  return (
+    <div className={classes.threeColumn}>
+      {
+        trails.map((props, idx) => (
+          <animated.div style={props}>
+            {data[idx]}
+          </animated.div>
+        ))
+      }
     </div>
   );
 }
