@@ -2,7 +2,12 @@ import { ReactElement } from 'react';
 import { animated, useTrail } from '@react-spring/web';
 import useStyles from '../useStyles';
 
-export default function Qualities() {
+type Props = {
+  go: boolean;
+  set: Function;
+}
+
+export default function Qualities({ go, set }: Props) {
   const classes = useStyles();
 
   const trails = useTrail(3, {
@@ -15,6 +20,7 @@ export default function Qualities() {
       transform: 'translate(0,0)',
     },
     delay: 1500,
+    onResolve: () => set(true),
   });
 
   const blurbOne = (): ReactElement => (
@@ -101,7 +107,7 @@ export default function Qualities() {
           FILED: 05-11-2019
         </p>
         <p>
-          "She felt threatened by Mastrangelo's demeanor and that [Mastrangelo] is a "scary guy""
+          "She felt threatened by Mastrangelo's demeanor and that [Mastrangelo] is a 'scary guy'"
         </p>
     </>
   );
