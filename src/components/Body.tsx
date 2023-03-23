@@ -1,4 +1,5 @@
-import { animated, useTransition } from '@react-spring/web';
+import { useState } from 'react';
+import { animated, useTransition, useSpring } from '@react-spring/web';
 import useStyles from '../useStyles';
 import Qualities from './Qualities';
 
@@ -8,6 +9,8 @@ type Props = {
 
 export default function Body({ display }: Props) {
   const classes = useStyles();
+
+  const [go, set] = useState<boolean>(false);
 
   const transitions = useTransition(!display, {
     from: {
@@ -23,6 +26,12 @@ export default function Body({ display }: Props) {
       transform: 'translate(500px,-200px)',
     },
   });
+  console.log('body:', go);
+  const spring = useSpring({
+    opacity: go ? 1 : 0,
+    transform: go ? 'translate(0,0)' : 'translate(0,200px)',
+    delay: 1500,
+  });
 
   return transitions((style, item) => (
     item && (
@@ -35,7 +44,15 @@ export default function Body({ display }: Props) {
           Mastrangelo:
         </h1>
 
-        <Qualities />
+        <Qualities go={go} set={set} />
+        <animated.div style={spring}>
+          <h2>
+            Don't take our word for it... just check out what Mastrangelo said about some of his Morris County colleagues.&nbsp;
+            <span style={{ color: 'var(--red)' }}>
+              WARNING: EXTREMELY FOUL LANGUAGE
+            </span>
+          </h2>
+        </animated.div>
       </animated.div>
     )
   ))
