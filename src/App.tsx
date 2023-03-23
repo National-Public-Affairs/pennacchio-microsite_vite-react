@@ -9,7 +9,7 @@ export default function App() {
   useEffect(() => {
     setDisplay(true);
   }, []);
-  
+
   return (
     <div className="App">
       <Intro display={display} setDisplay={setDisplay} />
