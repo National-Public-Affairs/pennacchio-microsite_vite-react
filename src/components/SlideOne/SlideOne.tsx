@@ -1,12 +1,12 @@
 import { animated, useTransition, useSpring } from '@react-spring/web';
-import useStyles from '../useStyles';
+import useStyles from '../../useStyles';
 
 type Props = {
   display: boolean;
   setDisplay: Function;
 }
 
-export default function Intro({ display, setDisplay }: Props) {
+export default function SlideOne({ display, setDisplay }: Props) {
   const classes = useStyles();
 
   const transitions = useTransition(display, {

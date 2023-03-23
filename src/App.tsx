@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import Intro from './components/Intro';
-import Body from './components/Body';
+import SlideOne from './components/SlideOne/SlideOne';
+import SlideTwo from './components/SlideTwo/SlideTwo';
 import './App.css';
 
 export default function App() {
@@ -12,8 +12,8 @@ export default function App() {
 
   return (
     <div className="App">
-      <Intro display={display} setDisplay={setDisplay} />
-      <Body display={display} />
+      <SlideOne display={display} setDisplay={setDisplay} />
+      <SlideTwo display={display} />
     </div>
   );
 }

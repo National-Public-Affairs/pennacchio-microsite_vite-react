@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import { animated, useTrail } from '@react-spring/web';
-import useStyles from '../useStyles';
+import useStyles from '../../useStyles';
 
 type Props = {
   go: boolean;

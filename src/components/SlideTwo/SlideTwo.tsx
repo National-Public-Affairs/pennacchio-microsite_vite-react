@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { animated, useTransition, useSpring } from '@react-spring/web';
-import useStyles from '../useStyles';
 import Qualities from './Qualities';
+import useStyles from '../../useStyles';
 
 type Props = {
   display: boolean;
 }
 
-export default function Body({ display }: Props) {
+export default function SlideTwo({ display }: Props) {
   const classes = useStyles();
 
   const [go, set] = useState<boolean>(false);
@@ -45,14 +45,14 @@ export default function Body({ display }: Props) {
         </h1>
 
         <Qualities go={go} set={set} />
-        <animated.div style={spring}>
+        {/* <animated.div style={spring}>
           <h2>
             Don't take our word for it... just check out what Mastrangelo said about some of his Morris County colleagues.&nbsp;
             <span style={{ color: 'var(--red)' }}>
               WARNING: EXTREMELY FOUL LANGUAGE
             </span>
           </h2>
-        </animated.div>
+        </animated.div> */}
       </animated.div>
     )
   ))
