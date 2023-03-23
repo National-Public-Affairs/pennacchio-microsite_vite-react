@@ -5,8 +5,10 @@ const useStyles = createUseStyles({
   body: {
     zIndex: 0,
     maxWidth: 1280,
+    overflowY: 'auto',
   },
   threeColumn: {
+    marginBottom: 100,
     display: 'grid',
     gridTemplate: '100% / repeat(3, 1fr)',
   },
