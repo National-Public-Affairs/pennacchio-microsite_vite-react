@@ -6,6 +6,13 @@ const useStyles = createUseStyles({
     zIndex: 0,
     maxWidth: 1280,
   },
+  threeColumn: {
+    display: 'grid',
+    gridTemplate: '100% / repeat(3, 1fr)',
+  },
+  hTwo: {
+    color: 'var(--red)',
+  },
   button: {
     padding: '1rem',
     border: 'none',
