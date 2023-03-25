@@ -5,6 +5,7 @@ const useStyles = createUseStyles({
   body: {
     zIndex: 0,
     maxWidth: 1280,
+    padding: '1rem',
   },
   threeColumn: {
     marginBottom: 100,
@@ -13,6 +14,9 @@ const useStyles = createUseStyles({
   },
   hTwo: {
     color: 'var(--red)',
+  },
+  case: {
+    fontSize: '1vmax',
   },
   button: {
     padding: '1rem',
@@ -128,6 +132,13 @@ const useStyles = createUseStyles({
   '@media only screen and (max-width: 900px) and (min-height: 300px)': {
     heroText: {
       marginBottom: '35%',
+    },
+    threeColumn: {
+      display: 'block',
+      gridTemplate: 'repeat(3, 1fr) / 100%',
+    },
+    case: {
+      fontSize: '1.8vmin'
     },
   },
 });

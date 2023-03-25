@@ -26,9 +26,9 @@ export default function Qualities({ go, set }: Props) {
   const blurbOne = (): ReactElement => (
     <>
       <h2 className={classes.hTwo}>
-          BULLIES
+          HARRASSES HIS OPPONENTS
         </h2>
-        <p>
+        <p className={classes.case}>
           COMPLAINT #I-2016-005748
           <br />
           MUNI: 1421
@@ -41,7 +41,7 @@ export default function Qualities({ go, set }: Props) {
           <br />
           AGE: 59
         </p>
-        <p>
+        <p className={classes.case}>
           MONTVILLE POLICE DEPARTMENT
           <br />
           FILED: 04-25-2016
@@ -52,9 +52,9 @@ export default function Qualities({ go, set }: Props) {
   const blurbTwo = (): ReactElement => (
     <>
       <h2 className={classes.hTwo}>
-          HARRASSES
+          BULLIES PEOPLE WHO STAND IN HIS WAY
         </h2>
-        <p>
+        <p className={classes.case}>
           CASE: S-2016-243
           <br />
           DEFENDANT: THOMAS MASTRANGELO
@@ -64,7 +64,7 @@ export default function Qualities({ go, set }: Props) {
         <h3>
           CHARGE INFO
         </h3>
-        <ul>
+        <ul className={classes.case}>
           <li>
             SIMPLE ASSAULT
           </li>
@@ -72,14 +72,14 @@ export default function Qualities({ go, set }: Props) {
             THREAT OF SBI BY PHYSICAL MENACE
           </li>
         </ul>
-        <p>
+        <p className={classes.case}>
           COMPLAINT #S-2016-243
           <br />
           OFFENSE DATE: 06-25-2016
           <br />
           POLICE CASE #2016-00574
         </p>
-        <p>
+        <p className={classes.case}>
           MONTVILLE TWP MUNICIPAL COURT
         </p>
     </>
@@ -88,9 +88,9 @@ export default function Qualities({ go, set }: Props) {
   const blurbThree = (): ReactElement => (
     <>
       <h2 className={classes.hTwo}>
-          INTIMIDATES
+          INTIMIDATES THEM INTO DOING WHAT HE WANTS
         </h2>
-        <p>
+        <p className={classes.case}>
           CASE #I-2016-005748
           <br />
           MUNI: 1421
@@ -101,12 +101,12 @@ export default function Qualities({ go, set }: Props) {
           <br />
           NAME: MASTRANGELO, THOMAS J.
         </p>
-        <p>
+        <p className={classes.case}>
           MONTVILLE POLICE DEPARTMENT
           <br />
           FILED: 05-11-2019
         </p>
-        <p>
+        <p className={classes.case}>
           "She felt threatened by Mastrangelo's demeanor and that [Mastrangelo] is a 'scary guy'"
         </p>
     </>
