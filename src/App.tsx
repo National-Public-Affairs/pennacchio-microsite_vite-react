@@ -6,6 +6,7 @@ import './App.css';
 
 export default function App() {
   const [display, setDisplay] = useState<boolean>(false);
+  const [currentSlide, setSlide] = useState<number>(1);
 
   useEffect(() => {
     setDisplay(true);
@@ -13,8 +14,22 @@ export default function App() {
 
   return (
     <div className="App">
-      <NavButton />
-      <SlideOne display={display} setDisplay={setDisplay} />
+      {
+        currentSlide != 1
+          ? (
+            <NavButton
+              currentSlide={currentSlide}
+              setSlide={setSlide}
+            />
+          )
+          : null
+      }
+      <SlideOne
+        display={display}
+        setDisplay={setDisplay}
+        currentSlide={currentSlide}
+        setSlide={setSlide}
+      />
       <SlideTwo display={display} />
     </div>
   );
