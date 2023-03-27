@@ -1,4 +1,4 @@
-import { animated, useTrail, useSpring } from '@react-spring/web';
+import { animated, useSpring } from '@react-spring/web';
 import useStyles from '../../generalStyles';
 
 type Props = {
