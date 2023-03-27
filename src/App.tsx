@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer';
 import SlideOne from './components/SlideOne/SlideOne';
 import SlideTwo from './components/SlideTwo/SlideTwo';
 import SlideThree from './components/SlideThree/SlideThree';
+import SlideFour from './components/SlideFour/SlideFour';
 import './App.css';
 
 export default function App() {
@@ -30,6 +31,9 @@ export default function App() {
         currentSlide={currentSlide}
       />
       <SlideThree
+        currentSlide={currentSlide}
+      />
+      <SlideFour
         currentSlide={currentSlide}
       />
     </div>
