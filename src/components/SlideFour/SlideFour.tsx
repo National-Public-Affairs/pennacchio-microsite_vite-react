@@ -8,7 +8,7 @@ type Props = {
 export default function SlideFour({ currentSlide}: Props) {
   const generalStyles = useGeneralStyles();
 
-  const transitions = useTransition(currentSlide === 4, {
+  const transitions = useTransition(currentSlide === 6, {
     from: {
       opacity: 0,
       transform: 'translate(0,-200px)',
