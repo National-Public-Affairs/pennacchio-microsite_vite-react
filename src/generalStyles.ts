@@ -3,6 +3,10 @@ import heroImage from './assets/Mastrangelo.jpg';
 
 const useGeneralStyles = createUseStyles({
   body: {
+    gridColumn: 1,
+    gridRow: 1,
+    justifySelf: 'center',
+    alignSelf: 'center',
     zIndex: 0,
     maxWidth: 1280,
     padding: '1rem',
