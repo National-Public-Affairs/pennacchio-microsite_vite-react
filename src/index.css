@@ -38,11 +38,11 @@ body {
 }
 
 h1 {
-  font-size: 3vmax;
+  font-size: clamp(24px, 3vmax, 50px);
 }
 
 h2 {
-  font-size: 2vmax;
+  font-size: clamp(18px, 2vmax, 36px);
 }
 
 audio {
@@ -56,8 +56,7 @@ audio {
   }
 
   h2 {
-    font-size: 32;
-    /* clamp(3vmin) */
+    font-size: clamp(10px, 3vmin, 18px);
   }
 
   h3 {

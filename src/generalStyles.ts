@@ -18,7 +18,7 @@ const useGeneralStyles = createUseStyles({
     width: '80%',
   },
   case: {
-    fontSize: '1vmax',
+    fontSize: '(8px, 1vmax, 22px)',
   },
   button: {
     padding: '1rem',

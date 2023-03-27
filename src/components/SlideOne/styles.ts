@@ -23,8 +23,9 @@ const useStyles = createUseStyles({
   heroButton: {
     justifySelf: 'center',
     alignSelf: 'center',
+    maxWidth: 500,
     padding: '1rem 5vw',
-    fontSize: '1.8vw',
+    fontSize: 'clamp(18px, 1.8vw, 32px)',
   },
   heroButtonWrapper: {
     position: 'absolute',
@@ -51,13 +52,13 @@ const useStyles = createUseStyles({
     justifySelf: 'right',
     alignSelf: 'end',
     width: '80%',
-    marginBottom: '12%',
+    marginBottom: 'clamp(10px, 12%, 200px)',
     color: 'white',
     fontFamily: 'Roboto Mono',
-    fontSize: 'clamp(38px, 10vw, 150px)',
+    fontSize: 'clamp(38px, 10vw, 125px)',
     fontWeight: 700,
     fontStyle: 'italic',
-    lineHeight: '8vw',
+    lineHeight: 'clamp(28px, 8vw, 125px)',
     cursor: 'default',
   },
   heroImage: {
