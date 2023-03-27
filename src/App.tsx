@@ -2,6 +2,7 @@ import { useState } from 'react';
 import NavButton from './components/NavButton/NavButton';
 import SlideOne from './components/SlideOne/SlideOne';
 import SlideTwo from './components/SlideTwo/SlideTwo';
+import SlideThree from './components/SlideThree/SlideThree';
 import './App.css';
 
 export default function App() {
@@ -24,6 +25,9 @@ export default function App() {
         setSlide={setSlide}
       />
       <SlideTwo
+        currentSlide={currentSlide}
+      />
+      <SlideThree
         currentSlide={currentSlide}
       />
     </div>
