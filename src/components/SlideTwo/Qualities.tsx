@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import { animated, useTrail } from '@react-spring/web';
-import useStyles from '../../useStyles';
+import useStyles from '../../generalStyles';
 
 type Props = {
   go: boolean;
@@ -118,7 +118,7 @@ export default function Qualities({ go, set }: Props) {
     <div className={classes.threeColumn}>
       {
         trails.map((props, idx) => (
-          <animated.div style={props}>
+          <animated.div key={`idx-${idx}`} style={props}>
             {data[idx]}
           </animated.div>
         ))

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { animated, useTransition, useSpring } from '@react-spring/web';
 import Qualities from './Qualities';
-import useStyles from '../../useStyles';
+import useStyles from '../../generalStyles';
 
 type Props = {
   display: boolean;
@@ -26,7 +26,7 @@ export default function SlideTwo({ display }: Props) {
       transform: 'translate(500px,-200px)',
     },
   });
-  console.log('body:', go);
+
   const spring = useSpring({
     opacity: go ? 1 : 0,
     transform: go ? 'translate(0,0)' : 'translate(0,200px)',
