@@ -106,6 +106,7 @@ const useStyles = createUseStyles({
     height: '60vh',
     backgroundColor: '#7C131A',
   },
+  // general mobile
   '@media only screen and (max-width: 900px) and (min-height: 300px)': {
     heroText: {
       marginBottom: '35%',
@@ -114,6 +115,21 @@ const useStyles = createUseStyles({
       padding: '3vmin',
       borderRadius: '3vmin',
       fontSize: '4vmin',
+    },
+  },
+  // mobile landscape
+  '@media only screen and (max-width: 950px) and (max-height: 450px)': {
+    heroText: {
+      marginBottom: '11%',
+      fontSize: '5vw',
+      lineHeight: '5.5vw',
+    },
+    heroButtonWrapper: {
+      height: '18vh',
+    },
+    heroButton: {
+      alignSelf: 'start',
+      padding: '0.5rem 2vw',
     },
   },
 });
