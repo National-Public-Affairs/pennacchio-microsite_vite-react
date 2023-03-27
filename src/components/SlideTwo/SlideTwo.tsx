@@ -9,7 +9,7 @@ type Props = {
 export default function SlideTwo({ currentSlide }: Props) {
   const classes = useStyles();
 
-  const transitions = useTransition(currentSlide === 2, {
+  const transitions = useTransition(currentSlide >= 2 && currentSlide <= 4, {
     from: {
       opacity: 0,
       transform: 'translate(0,-200px)',
@@ -22,6 +22,7 @@ export default function SlideTwo({ currentSlide }: Props) {
       opacity: 0,
       transform: 'translate(500px,-200px)',
     },
+    delay: 500,
   });
 
   return transitions((style, item) => (
@@ -35,7 +36,7 @@ export default function SlideTwo({ currentSlide }: Props) {
           Mastrangelo:
         </h1>
 
-        <Qualities />
+        <Qualities currentSlide={currentSlide} />
       </animated.div>
     )
   ))

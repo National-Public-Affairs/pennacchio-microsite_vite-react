@@ -1,51 +1,57 @@
-import { ReactElement } from 'react';
-import { animated, useTrail } from '@react-spring/web';
+import { animated, useTrail, useSpring } from '@react-spring/web';
 import useStyles from '../../generalStyles';
 
-export default function Qualities() {
+type Props = {
+  currentSlide: number;
+}
+
+export default function Qualities({ currentSlide }: Props) {
   const classes = useStyles();
 
-  const trails = useTrail(3, {
-    from: {
-      opacity: 0,
-      transform: 'translate(0,100px)',
-    },
-    to: {
-      opacity: 1,
-      transform: 'translate(0,0)',
-    },
-    delay: 1500,
+  const styleOne = useSpring({
+    opacity: currentSlide >= 2 && currentSlide <= 4 ? 1 : 0,
+    transform: currentSlide ? 'translate(0,0)' : 'translate(0,100px)',
   });
 
-  const blurbOne = (): ReactElement => (
-    <>
-      <h2 className={classes.hTwo}>
-          HARRASSES HIS OPPONENTS
-        </h2>
-        <p className={classes.case}>
-          COMPLAINT #I-2016-005748
-          <br />
-          MUNI: 1421
-          <br />
-          CALL TYPE: HARASSMENT
-          <br />
-          ROLE: ACCUSED
-          <br />
-          NAME: MASTRANGELO, THOMAS J.
-          <br />
-          AGE: 59
-        </p>
-        <p className={classes.case}>
-          MONTVILLE POLICE DEPARTMENT
-          <br />
-          FILED: 04-25-2016
-        </p>
-    </>
-  );
+  const styleTwo = useSpring({
+    opacity: currentSlide === 3 || currentSlide === 4 ? 1 : 0,
+    transform: currentSlide ? 'translate(0,0)' : 'translate(0,100px)',
+  });
 
-  const blurbTwo = (): ReactElement => (
-    <>
-      <h2 className={classes.hTwo}>
+  const styleThree = useSpring({
+    opacity: currentSlide === 4 ? 1 : 0,
+    transform: currentSlide ? 'translate(0,0)' : 'translate(0,100px)',
+  });
+
+  
+  return (
+    <div className={classes.threeColumn}>
+      <animated.div style={styleOne}>
+        <h2 className={classes.hTwo}>
+        HARRASSES HIS OPPONENTS
+      </h2>
+      <p className={classes.case}>
+        COMPLAINT #I-2016-005748
+        <br />
+        MUNI: 1421
+        <br />
+        CALL TYPE: HARASSMENT
+        <br />
+        ROLE: ACCUSED
+        <br />
+        NAME: MASTRANGELO, THOMAS J.
+        <br />
+        AGE: 59
+      </p>
+      <p className={classes.case}>
+        MONTVILLE POLICE DEPARTMENT
+        <br />
+        FILED: 04-25-2016
+      </p>
+      </animated.div>
+
+      <animated.div style={styleTwo}>
+        <h2 className={classes.hTwo}>
           BULLIES PEOPLE WHO STAND IN HIS WAY
         </h2>
         <p className={classes.case}>
@@ -76,12 +82,10 @@ export default function Qualities() {
         <p className={classes.case}>
           MONTVILLE TWP MUNICIPAL COURT
         </p>
-    </>
-  );
+      </animated.div>
 
-  const blurbThree = (): ReactElement => (
-    <>
-      <h2 className={classes.hTwo}>
+      <animated.div style={styleThree}>
+        <h2 className={classes.hTwo}>
           INTIMIDATES THEM INTO DOING WHAT HE WANTS
         </h2>
         <p className={classes.case}>
@@ -103,20 +107,7 @@ export default function Qualities() {
         <p className={classes.case}>
           "She felt threatened by Mastrangelo's demeanor and that [Mastrangelo] is a 'scary guy'"
         </p>
-    </>
-  );
-
-  const data: ReactElement[] = [blurbOne(), blurbTwo(), blurbThree()];
-
-  return (
-    <div className={classes.threeColumn}>
-      {
-        trails.map((props, idx) => (
-          <animated.div key={`idx-${idx}`} style={props}>
-            {data[idx]}
-          </animated.div>
-        ))
-      }
+      </animated.div>
     </div>
   );
 }
