@@ -1,6 +1,7 @@
 import { animated, useTransition } from '@react-spring/web';
 import audio from '../../assets/freeholder-tom-mastrangelo-threatening-and-cursing.mp3';
 import { useStyles } from './styles';
+import useGeneralStyles from '../../generalStyles';
 
 type Props = {
   currentSlide: number;
@@ -8,6 +9,7 @@ type Props = {
 
 export default function SlideThree({ currentSlide }: Props) {
   const styles = useStyles();
+  const generalStyles = useGeneralStyles();
 
   const transitions = useTransition(currentSlide === 3, {
     from: {
@@ -27,7 +29,7 @@ export default function SlideThree({ currentSlide }: Props) {
 
   return transitions((style, item) => (
     item && (
-      <animated.div style={style} className={styles.wrapper}>
+      <animated.div style={style} className={`${styles.wrapper} ${generalStyles.body}`}>
         <h2 className={styles.text}>
           Don't take our word for it... just check out what <span style={{ color: 'yellow' }}>Mastrangelo</span> said about some of his Morris County colleagues.&nbsp;
           <br />

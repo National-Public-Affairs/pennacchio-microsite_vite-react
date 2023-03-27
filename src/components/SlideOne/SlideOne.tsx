@@ -1,5 +1,6 @@
 import { animated, useTransition, useSpring } from '@react-spring/web';
 import useStyles from './styles';
+import useGeneralStyles from '../../generalStyles';
 
 type Props = {
   currentSlide: number;
@@ -11,6 +12,7 @@ export default function SlideOne({
   setSlide,
 }: Props) {
   const classes = useStyles();
+  const generalStyles = useGeneralStyles();
 
   const transitions = useTransition(currentSlide === 1, {
     from: {
@@ -47,7 +49,7 @@ export default function SlideOne({
 
   return transitions((styles, item) => (
     item && (
-      <animated.div style={styles}>
+      <animated.div style={styles} className={generalStyles.body}>
         <div className={classes.heroTextWrapper}>
           <animated.div className={classes.heroText} style={heroTextSpring}>
             Do you know the real Tom Mastrangelo?

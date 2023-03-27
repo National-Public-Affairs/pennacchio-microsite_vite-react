@@ -1,10 +1,13 @@
 import { animated, useTransition } from '@react-spring/web';
+import useGeneralStyles from '../../generalStyles';
 
 type Props = {
   currentSlide: number;
 }
 
 export default function SlideFour({ currentSlide}: Props) {
+  const generalStyles = useGeneralStyles();
+
   const transitions = useTransition(currentSlide === 4, {
     from: {
       opacity: 0,
@@ -23,7 +26,7 @@ export default function SlideFour({ currentSlide}: Props) {
 
   return transitions((style, item) => (
     item && (
-      <animated.div style={style}>
+      <animated.div style={style} className={generalStyles.body}>
         <h2>
           On <span style={{ color: 'yellow' }}>June 6th</span>, don't let <span style={{ color: 'red' }}>Mastrangelo</span> bully his way into office again!
         </h2>
