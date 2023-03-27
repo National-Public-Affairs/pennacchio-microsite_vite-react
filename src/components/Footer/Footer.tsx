@@ -5,7 +5,9 @@ export default function Footer() {
 
   return (
     <footer className={styles.wrapper}>
-      Paid for by EFO Joe Pennacchio, P.O. Box 335, Cedar Knolls, NJ
+      <div>
+        Paid for by EFO Joe Pennacchio, P.O. Box 335, Cedar Knolls, NJ
+      </div>
     </footer>
   );
 }
