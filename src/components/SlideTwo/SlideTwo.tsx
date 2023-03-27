@@ -1,13 +1,15 @@
 import { animated, useTransition } from '@react-spring/web';
 import Qualities from './Qualities';
-import useStyles from '../../generalStyles';
+import useGeneralStyles from '../../generalStyles';
+import { useStyles } from './styles';
 
 type Props = {
   currentSlide: number;
 }
 
 export default function SlideTwo({ currentSlide }: Props) {
-  const classes = useStyles();
+  const generalStyle = useGeneralStyles();
+  const styles = useStyles();
 
   const transitions = useTransition(currentSlide >= 2 && currentSlide <= 4, {
     from: {
@@ -27,12 +29,12 @@ export default function SlideTwo({ currentSlide }: Props) {
 
   return transitions((style, item) => (
     item && (
-      <animated.div className={classes.body} style={style}>
-        <h2>
-          <span style={{ color: 'var(--red)' }}>Failed Commissioner Tom Mastrangelo isn’t fit for office.</span> His behavior should disqualify him from holding any office, not earn him a promotion and make him a Senator.
+      <animated.div className={generalStyle.body} style={style}>
+        <h2 className={styles.about}>
+          Failed Commissioner Tom Mastrangelo isn’t fit for office.<span style={{ color: 'white' }}> His behavior should disqualify him from holding any office, not earn him a promotion and make him a Senator.</span>
         </h2>
 
-        <h1 style={{ color: 'yellow' }}>
+        <h1 style={{ color: 'yellow' }} className={styles.hOne}>
           Mastrangelo:
         </h1>
 

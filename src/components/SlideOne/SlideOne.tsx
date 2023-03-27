@@ -49,7 +49,7 @@ export default function SlideOne({
 
   return transitions((styles, item) => (
     item && (
-      <animated.div style={styles} className={generalStyles.body}>
+      <animated.div style={styles}>
         <div className={classes.heroTextWrapper}>
           <animated.div className={classes.heroText} style={heroTextSpring}>
             Do you know the real Tom Mastrangelo?

@@ -1,12 +1,14 @@
 import { animated, useSpring } from '@react-spring/web';
-import useStyles from '../../generalStyles';
+import useGeneralStyles from '../../generalStyles';
+import { useStyles } from './styles';
 
 type Props = {
   currentSlide: number;
 }
 
 export default function Qualities({ currentSlide }: Props) {
-  const classes = useStyles();
+  const classes = useGeneralStyles();
+  const styles = useStyles();
 
   const styleOne = useSpring({
     opacity: currentSlide >= 2 && currentSlide <= 4 ? 1 : 0,
@@ -27,7 +29,7 @@ export default function Qualities({ currentSlide }: Props) {
   return (
     <div className={classes.threeColumn}>
       <animated.div style={styleOne}>
-        <h2 className={classes.hTwo}>
+        <h2 className={styles.hTwo}>
         HARRASSES HIS OPPONENTS
       </h2>
       <p className={classes.case}>
@@ -51,7 +53,7 @@ export default function Qualities({ currentSlide }: Props) {
       </animated.div>
 
       <animated.div style={styleTwo}>
-        <h2 className={classes.hTwo}>
+        <h2 className={styles.hTwo}>
           BULLIES PEOPLE WHO STAND IN HIS WAY
         </h2>
         <p className={classes.case}>
@@ -85,7 +87,7 @@ export default function Qualities({ currentSlide }: Props) {
       </animated.div>
 
       <animated.div style={styleThree}>
-        <h2 className={classes.hTwo}>
+        <h2 className={styles.hTwo}>
           INTIMIDATES THEM INTO DOING WHAT HE WANTS
         </h2>
         <p className={classes.case}>
