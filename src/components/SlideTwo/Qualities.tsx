@@ -2,12 +2,7 @@ import { ReactElement } from 'react';
 import { animated, useTrail } from '@react-spring/web';
 import useStyles from '../../generalStyles';
 
-type Props = {
-  go: boolean;
-  set: Function;
-}
-
-export default function Qualities({ go, set }: Props) {
+export default function Qualities() {
   const classes = useStyles();
 
   const trails = useTrail(3, {
@@ -20,7 +15,6 @@ export default function Qualities({ go, set }: Props) {
       transform: 'translate(0,0)',
     },
     delay: 1500,
-    onResolve: () => set(true),
   });
 
   const blurbOne = (): ReactElement => (

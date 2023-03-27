@@ -2,14 +2,17 @@ import { animated, useTransition, useSpring } from '@react-spring/web';
 import useStyles from './styles';
 
 type Props = {
-  display: boolean;
-  setDisplay: Function;
+  currentSlide: number;
+  setSlide: Function;
 }
 
-export default function SlideOne({ display, setDisplay }: Props) {
+export default function SlideOne({
+  currentSlide,
+  setSlide,
+}: Props) {
   const classes = useStyles();
 
-  const transitions = useTransition(display, {
+  const transitions = useTransition(currentSlide === 1, {
     from: {
       opacity: 0,
     },
@@ -22,24 +25,24 @@ export default function SlideOne({ display, setDisplay }: Props) {
   });
 
   const recOneSpring = useSpring({
-    transform: display ? 'translate(0,0)' : 'translate(500px,-200px)',
+    transform: currentSlide === 1 ? 'translate(0,0)' : 'translate(500px,-200px)',
   });
 
   const recTwoSpring = useSpring({
-    transform: display ? 'translate(0,0)' : 'translate(-500px,-200px)',
+    transform: currentSlide === 1 ? 'translate(0,0)' : 'translate(-500px,-200px)',
   });
 
   const heroImgSpring = useSpring({
-    transform: display ? 'translate(0,0)' : 'translate(-10px,-200px)',
+    transform: currentSlide === 1 ? 'translate(0,0)' : 'translate(-10px,-200px)',
   });
   
   const heroTextSpring = useSpring({
-    letterSpacing: display ? '0.5vw' : '1vw',
-    transform: display ? 'translate(0,0)' : 'translate(200px,0)',
+    letterSpacing: currentSlide === 1 ? '0.5vw' : '1vw',
+    transform: currentSlide === 1 ? 'translate(0,0)' : 'translate(200px,0)',
   });
   
   const buttonSpring = useSpring({
-    transform: display ? 'translate(0,0)' : 'translate(0,200px)',
+    transform: currentSlide === 1 ? 'translate(0,0)' : 'translate(0,200px)',
   });
 
   return transitions((styles, item) => (
@@ -55,16 +58,29 @@ export default function SlideOne({ display, setDisplay }: Props) {
           <animated.button
             className={`${classes.heroButton} ${classes.button}`}
             style={buttonSpring}
-            onClick={() => setDisplay(false)}
+            onClick={() => setSlide(2)}
           >
             find out more
           </animated.button>
         </div>
 
-        <animated.div className={classes.heroImage} style={heroImgSpring} />
-        <animated.div className={classes.heroImageTwo} style={heroImgSpring} />
-        <animated.div className={classes.recTwo} style={recTwoSpring} />
-        <animated.div className={classes.recOne} style={recOneSpring} />
+        <animated.div
+          className={classes.heroImage}
+          style={heroImgSpring}
+        />
+        <animated.div
+          className={classes.heroImageTwo}
+          style={heroImgSpring}
+        />
+        <animated.div
+          className={classes.recTwo}
+          style={recTwoSpring}
+        />
+        <animated.div
+          className={classes.recOne}
+          style={recOneSpring}
+        />
+
         <div />
       </animated.div>
     )

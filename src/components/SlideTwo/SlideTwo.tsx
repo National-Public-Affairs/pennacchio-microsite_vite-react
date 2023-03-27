@@ -1,18 +1,15 @@
-import { useState } from 'react';
-import { animated, useTransition, useSpring } from '@react-spring/web';
+import { animated, useTransition } from '@react-spring/web';
 import Qualities from './Qualities';
 import useStyles from '../../generalStyles';
 
 type Props = {
-  display: boolean;
+  currentSlide: number;
 }
 
-export default function SlideTwo({ display }: Props) {
+export default function SlideTwo({ currentSlide }: Props) {
   const classes = useStyles();
 
-  const [go, set] = useState<boolean>(false);
-
-  const transitions = useTransition(!display, {
+  const transitions = useTransition(currentSlide === 2, {
     from: {
       opacity: 0,
       transform: 'translate(0,-200px)',
@@ -27,12 +24,6 @@ export default function SlideTwo({ display }: Props) {
     },
   });
 
-  const spring = useSpring({
-    opacity: go ? 1 : 0,
-    transform: go ? 'translate(0,0)' : 'translate(0,200px)',
-    delay: 1500,
-  });
-
   return transitions((style, item) => (
     item && (
       <animated.div className={classes.body} style={style}>
@@ -44,7 +35,7 @@ export default function SlideTwo({ display }: Props) {
           Mastrangelo:
         </h1>
 
-        <Qualities go={go} set={set} />
+        <Qualities />
         {/* <animated.div style={spring}>
           <h2>
             Don't take our word for it... just check out what Mastrangelo said about some of his Morris County colleagues.&nbsp;
