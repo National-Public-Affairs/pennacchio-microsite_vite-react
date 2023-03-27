@@ -1,10 +1,18 @@
 import { useStyles } from './styles';
 
-export default function NavButton() {
+type Props = {
+  currentSlide: number;
+  setSlide: Function;
+}
+
+export default function NavButton({ currentSlide, setSlide }: Props) {
   const style = useStyles();
 
   return (
-    <div className={`${style.buttonWrapper}`}>
+    <div
+      className={`${style.buttonWrapper}`}
+      onClick={() => setSlide(currentSlide + 1)}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         height="48"
