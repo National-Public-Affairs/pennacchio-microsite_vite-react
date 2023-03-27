@@ -36,14 +36,6 @@ export default function SlideTwo({ currentSlide }: Props) {
         </h1>
 
         <Qualities />
-        {/* <animated.div style={spring}>
-          <h2>
-            Don't take our word for it... just check out what Mastrangelo said about some of his Morris County colleagues.&nbsp;
-            <span style={{ color: 'var(--red)' }}>
-              WARNING: EXTREMELY FOUL LANGUAGE
-            </span>
-          </h2>
-        </animated.div> */}
       </animated.div>
     )
   ))
