@@ -151,7 +151,6 @@ const useGeneralStyles = createUseStyles({
     },
     threeColumn: {
       display: 'block',
-      gridTemplate: 'repeat(3, 1fr) / 100%',
     },
     case: {
       fontSize: '1.8vmin'
@@ -163,6 +162,15 @@ const useGeneralStyles = createUseStyles({
     },
     hTwo: {
       width: '100%',
+    },
+  },
+  // mobile landscape
+  '@media only screen and (max-width: 950px) and (max-height: 450px)': {
+    threeColumn: {
+      display: 'grid',
+    },
+    body: {
+      maxHeight: '100vh',
     },
   },
 });
