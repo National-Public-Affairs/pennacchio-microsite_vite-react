@@ -23,19 +23,21 @@ export default function App() {
           )
           : null
       }
-      <SlideOne
-        currentSlide={currentSlide}
-        setSlide={setSlide}
-      />
-      <SlideTwo
-        currentSlide={currentSlide}
-      />
-      <SlideThree
-        currentSlide={currentSlide}
-      />
-      <SlideFour
-        currentSlide={currentSlide}
-      />
+      <div className="slide">
+        <SlideOne
+          currentSlide={currentSlide}
+          setSlide={setSlide}
+        />
+        <SlideTwo
+          currentSlide={currentSlide}
+        />
+        <SlideThree
+          currentSlide={currentSlide}
+        />
+        <SlideFour
+          currentSlide={currentSlide}
+        />
+      </div>
     </div>
   );
 }
