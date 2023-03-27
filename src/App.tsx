@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import NavButton from './components/NavButton/NavButton';
+import Footer from './components/Footer/Footer';
 import SlideOne from './components/SlideOne/SlideOne';
 import SlideTwo from './components/SlideTwo/SlideTwo';
 import SlideThree from './components/SlideThree/SlideThree';
@@ -10,6 +11,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <Footer />
       {
         currentSlide != 1
           ? (
