@@ -74,6 +74,7 @@ const useStyles = createUseStyles({
     backgroundColor: 'black',
     mixBlendMode: 'normal',
     opacity: 0.7,
+    filter: 'grayscale(65%)'
   },
   heroImageTwo: {
     position: 'absolute',
