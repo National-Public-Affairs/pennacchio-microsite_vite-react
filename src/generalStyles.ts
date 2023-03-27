@@ -11,6 +11,7 @@ const useGeneralStyles = createUseStyles({
     marginBottom: 100,
     display: 'grid',
     gridTemplate: '100% / repeat(3, 1fr)',
+    gridGap: 10,
   },
   hTwo: {
     color: 'var(--red)',
