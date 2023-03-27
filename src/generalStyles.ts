@@ -15,6 +15,7 @@ const useGeneralStyles = createUseStyles({
   },
   hTwo: {
     color: 'var(--red)',
+    width: '80%',
   },
   case: {
     fontSize: '1vmax',
@@ -155,6 +156,9 @@ const useGeneralStyles = createUseStyles({
       padding: '3vmin',
       borderRadius: '3vmin',
       fontSize: '4vmin',
+    },
+    hTwo: {
+      width: '100%',
     },
   },
 });
