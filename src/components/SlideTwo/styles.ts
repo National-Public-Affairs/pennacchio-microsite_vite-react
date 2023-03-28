@@ -16,6 +16,7 @@ export const useStyles = createUseStyles({
   },
   about: {
     lineHeight: 'inherit',
+    color: 'var(--red)',
   },
   '@media only screen and (max-width: 900px) and (min-height: 300px)': {
     hOne: {
