@@ -30,7 +30,10 @@ export default function SlideTwoPointFive({ currentSlide }: Props) {
   return transitions((style, item) => (
     item && (
       <animated.div style={style} className={generalStyles.body}>
-        <a href="https://newjerseyglobe.com/legislature/mastrangelo-fundraiser-featured-ex-nfl-players-convicted-of-sexual-assaults/">
+        <a
+          href="https://newjerseyglobe.com/legislature/mastrangelo-fundraiser-featured-ex-nfl-players-convicted-of-sexual-assaults/"
+          className={styles.imageLink}
+        >
           <img
             src={articleCutout}
             alt="Mastrangelo fundraiser featured ex-NFL players convicted of sexual assaults - New Jersey Globe"
