@@ -35,7 +35,16 @@ export default function SlideFour({ currentSlide}: Props) {
         <h2 className={styles.text}>
           On <span style={{ color: 'yellow' }}>June 6th</span>, don't let <span style={{ color: 'red' }}>Mastrangelo</span> bully his way into office again!
         </h2>
-        {/* add YouTube video */}
+        
+        <iframe
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/RasmrAsnO8o" title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen
+          style={{ borderRadius: '1rem' }}
+        >
+        </iframe>
       </animated.div>
     )
   ));
