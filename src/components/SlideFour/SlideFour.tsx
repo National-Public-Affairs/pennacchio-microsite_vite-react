@@ -10,7 +10,7 @@ export default function SlideFour({ currentSlide}: Props) {
   const generalStyles = useGeneralStyles();
   const styles = useStyles();
 
-  const transitions = useTransition(currentSlide === 6, {
+  const transitions = useTransition(currentSlide === 7, {
     from: {
       opacity: 0,
       transform: 'translate(0,-200px)',

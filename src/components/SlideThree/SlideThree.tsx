@@ -11,7 +11,7 @@ export default function SlideThree({ currentSlide }: Props) {
   const styles = useStyles();
   const generalStyles = useGeneralStyles();
 
-  const transitions = useTransition(currentSlide === 5, {
+  const transitions = useTransition(currentSlide === 6, {
     from: {
       opacity: 0,
       transform: 'translate(0,-200px)',
