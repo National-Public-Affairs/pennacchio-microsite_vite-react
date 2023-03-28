@@ -3,6 +3,7 @@ import NavButton from './components/NavButton/NavButton';
 import Footer from './components/Footer/Footer';
 import SlideOne from './components/SlideOne/SlideOne';
 import SlideTwo from './components/SlideTwo/SlideTwo';
+import SlideTwoPointFive from './components/SlideTwoPointFive/SlideTwoPointFive';
 import SlideThree from './components/SlideThree/SlideThree';
 import SlideFour from './components/SlideFour/SlideFour';
 import './App.css';
@@ -15,7 +16,7 @@ export default function App() {
     // value to avoid the current slide number going beyond the number
     // of existing slides
     const min = 1;
-    const max = 6;
+    const max = 7;
 
     // next slide
     if (desiredSlide > currentSlide) {
@@ -55,6 +56,9 @@ export default function App() {
           setSlide={handleCurrentSlide}
         />
         <SlideTwo
+          currentSlide={currentSlide}
+        />
+        <SlideTwoPointFive
           currentSlide={currentSlide}
         />
         <SlideThree
