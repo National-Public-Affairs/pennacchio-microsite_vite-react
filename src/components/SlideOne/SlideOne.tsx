@@ -1,5 +1,5 @@
 import { animated, useTransition, useSpring } from '@react-spring/web';
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 type Props = {
   currentSlide: number;
