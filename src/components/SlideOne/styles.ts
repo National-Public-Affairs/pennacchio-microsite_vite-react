@@ -1,7 +1,7 @@
 import { createUseStyles } from "react-jss";
 import heroImage from '../../assets/Mastrangelo.jpg';
 
-const useStyles = createUseStyles({
+export const useStyles = createUseStyles({
   button: {
     padding: '1rem',
     border: 'none',
@@ -73,8 +73,9 @@ const useStyles = createUseStyles({
     backgroundPosition: 'center',
     backgroundColor: 'black',
     mixBlendMode: 'normal',
+    border: '4vmax solid black',
     opacity: 0.7,
-    filter: 'grayscale(65%)'
+    filter: 'grayscale(65%)',
   },
   heroImageTwo: {
     position: 'absolute',
@@ -105,7 +106,7 @@ const useStyles = createUseStyles({
     zIndex: 2,
     width: '88%',
     height: '60vh',
-    backgroundColor: '#7C131A',
+    backgroundColor: '#DF2935',
   },
   // general mobile
   '@media only screen and (max-width: 900px) and (min-height: 300px)': {
@@ -134,5 +135,3 @@ const useStyles = createUseStyles({
     },
   },
 });
-
-export default useStyles;
