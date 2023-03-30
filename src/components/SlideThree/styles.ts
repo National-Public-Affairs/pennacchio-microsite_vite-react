@@ -1,4 +1,5 @@
 import { createUseStyles } from 'react-jss';
+import heroImage from '../../assets/Mastrangelo.jpg';
 
 export const useStyles = createUseStyles({
   wrapper: {
@@ -13,12 +14,27 @@ export const useStyles = createUseStyles({
     width: '100%',
     maxWidth: 700,
   },
+  pic: {
+    width: '45%',
+    height: '30vh',
+    margin: 'auto',
+    backgroundImage: `url(${heroImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: '50% 25%',
+    backgroundColor: 'black',
+    border: '1vmax solid black',
+    filter: 'grayscale(65%)',
+  },
   '@media only screen and (max-width: 900px) and (min-height: 300px)': {
     wrapper: {
       width: '85%',
     },
     text: {
-      fontSize: '6vmin',
+      fontSize: '4vmin',
+    },
+    pic: {
+      width: '50%',
+      height: '20vmax',
     },
   },
 });

@@ -30,6 +30,8 @@ export default function SlideThree({ currentSlide }: Props) {
   return transitions((style, item) => (
     item && (
       <animated.div style={style} className={`${styles.wrapper} ${generalStyles.body}`}>
+        <div className={styles.pic} />
+
         <h2 className={styles.text}>
           Don't take our word for it... just check out what <span style={{ color: 'yellow' }}>Mastrangelo</span> said about some of his Morris County colleagues.&nbsp;
           <br />
