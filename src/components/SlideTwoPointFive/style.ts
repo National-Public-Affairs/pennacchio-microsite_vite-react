@@ -11,6 +11,7 @@ export const useStyles = createUseStyles({
   '@media only screen and (max-width: 900px) and (min-height: 300px)': {
     image: {
       width: '100%',
+      margin: '0',
     },
   },
 });
