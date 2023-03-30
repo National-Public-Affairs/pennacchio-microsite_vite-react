@@ -16,7 +16,7 @@ export default function App() {
     // value to avoid the current slide number going beyond the number
     // of existing slides
     const min = 1;
-    const max = 7;
+    const max = 4;
 
     // next slide
     if (desiredSlide > currentSlide) {
@@ -55,9 +55,9 @@ export default function App() {
           currentSlide={currentSlide}
           setSlide={handleCurrentSlide}
         />
-        <SlideTwo
+        {/* <SlideTwo
           currentSlide={currentSlide}
-        />
+        /> */}
         <SlideTwoPointFive
           currentSlide={currentSlide}
         />

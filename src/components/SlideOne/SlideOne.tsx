@@ -1,6 +1,5 @@
 import { animated, useTransition, useSpring } from '@react-spring/web';
 import useStyles from './styles';
-import useGeneralStyles from '../../generalStyles';
 
 type Props = {
   currentSlide: number;
@@ -12,7 +11,6 @@ export default function SlideOne({
   setSlide,
 }: Props) {
   const classes = useStyles();
-  const generalStyles = useGeneralStyles();
 
   const transitions = useTransition(currentSlide === 1, {
     from: {
