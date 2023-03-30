@@ -73,6 +73,7 @@ const useStyles = createUseStyles({
     backgroundPosition: 'center',
     backgroundColor: 'black',
     mixBlendMode: 'normal',
+    border: '4vmax solid black',
     opacity: 0.7,
     filter: 'grayscale(65%)'
   },
@@ -105,7 +106,7 @@ const useStyles = createUseStyles({
     zIndex: 2,
     width: '88%',
     height: '60vh',
-    backgroundColor: '#7C131A',
+    backgroundColor: '#DF2935',
   },
   // general mobile
   '@media only screen and (max-width: 900px) and (min-height: 300px)': {
