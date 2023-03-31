@@ -42,7 +42,7 @@ export const useStyles = createUseStyles({
     },
     pic: {
       width: '100%',
-      height: '80vh',
+      height: '65vh',
     },
   },
 });
