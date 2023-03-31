@@ -18,7 +18,7 @@ export const useStyles = createUseStyles({
       width: '85%',
     },
     text: {
-      fontSize: '6vmin',
+      fontSize: '4vmin',
     },
   },
 });
