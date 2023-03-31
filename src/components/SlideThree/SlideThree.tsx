@@ -30,23 +30,22 @@ export default function SlideThree({ currentSlide }: Props) {
   return transitions((style, item) => (
     item && (
       <animated.div style={style} className={`${styles.wrapper} ${generalStyles.body}`}>
-        <div className={styles.pic} />
-
-        <h2 className={styles.text}>
-          Don't take our word for it... just check out what <span style={{ color: 'yellow' }}>Mastrangelo</span> said about some of his Morris County colleagues.&nbsp;
-          <br />
-          <span style={{ color: 'var(--red)' }}>
-            WARNING: EXTREMELY FOUL LANGUAGE
-          </span>
-        </h2>
-
-        <audio
-          controls
-          src={audio}
-          className={styles.audio}
-        >
-          Listen to the clip!
-        </audio>
+        <div className={styles.pic}>
+          <h2 className={styles.text}>
+            Don't take our word for it... just check out what <span style={{ color: 'yellow' }}>Mastrangelo</span> said about some of his Morris County colleagues.&nbsp;
+            <br />
+            <span style={{ color: 'var(--red)' }}>
+              WARNING: EXTREMELY FOUL LANGUAGE
+            </span>
+            <audio
+              controls
+              src={audio}
+              className={styles.audio}
+            >
+              Listen to the clip!
+            </audio>
+          </h2>
+        </div>
       </animated.div>
     )
   ));
