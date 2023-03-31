@@ -11,6 +11,7 @@ export const useStyles = createUseStyles({
     fontSize: '1rem',
     fontWeight: 500,
     fontStyle: 'regular',
+    color: 'black',
     transition: 'background-color 150ms ease-in-out',
     cursor: 'pointer',
     '&:hover': {
@@ -68,6 +69,7 @@ export const useStyles = createUseStyles({
     zIndex: 5,
     width: '80%',
     height: '70vh',
+    margin: '0 10%',
     backgroundImage: `url(${heroImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -84,6 +86,7 @@ export const useStyles = createUseStyles({
     zIndex: 4,
     width: '80%',
     height: '70vh',
+    margin: '0 10%',
     backgroundImage: `url(${heroImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -98,6 +101,7 @@ export const useStyles = createUseStyles({
     width: '70%',
     height: '75vh',
     backgroundColor: '#DF2935',
+    opacity: '50%',
   },
   recOne: {
     position: 'absolute',
@@ -107,6 +111,7 @@ export const useStyles = createUseStyles({
     width: '88%',
     height: '60vh',
     backgroundColor: '#DF2935',
+    opacity: '50%',
   },
   // general mobile
   '@media only screen and (max-width: 900px) and (min-height: 300px)': {
