@@ -55,9 +55,6 @@ export default function App() {
           currentSlide={currentSlide}
           setSlide={handleCurrentSlide}
         />
-        {/* <SlideTwo
-          currentSlide={currentSlide}
-        /> */}
         <SlideTwoPointFive
           currentSlide={currentSlide}
         />
