@@ -29,7 +29,7 @@ export default function FinancialWoes({ currentSlide }: Props) {
   return transitions((style, item) => (
     item && (
       <animated.div style={style} className={`${styles.wrapper} ${generalStyles.body}`}>
-        <h2>
+        <h2 className={styles.heading}>
           <span style={{ color: 'var(--red)' }}>Mastrangelo can't manage his own finances.</span> We can't trust him to manage ours!
         </h2>
 
